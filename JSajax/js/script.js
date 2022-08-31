@@ -7,7 +7,7 @@ $('#form1').submit(function(e){
 
     console.log(u_name, u_comment);
     $.ajax({
-        url: 'link banco',
+        url: 'http://localhost/github/Leandro-Leonardo/JSajax/',
         method: 'POST',
         data: {name: u_name, comment:u_comment},
         dataType: 'json'
