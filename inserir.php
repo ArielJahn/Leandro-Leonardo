@@ -4,7 +4,7 @@
     $name = $_POST['name'];
     $comment = $_POST['comment'];
 
-    $pdo = new PDO('mysql:host=localhost; dbname=ajax;', 'root', '');
+    $pdo = new PDO('mysql:host=localhost; dbname=carro;', 'root', '');
 
     $stmt = $pdo->prepare('INSERT INTO comments (name, comment) VALUES (:na, :co)');
     $stmt->bindValue(':na', $name);

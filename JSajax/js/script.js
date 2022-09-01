@@ -7,7 +7,7 @@ $('#form1').submit(function(e){
 
     console.log(u_name, u_comment);
     $.ajax({
-        url: 'http://localhost/github/Leandro-Leonardo/JSajax/',
+        url: 'http://localhost/github/Leandro-Leonardo/inserir.php',
         method: 'POST',
         data: {name: u_name, comment:u_comment},
         dataType: 'json'
@@ -21,7 +21,7 @@ $('#form1').submit(function(e){
 
 function getComments() {
     $.ajax({
-        url: 'link banco',
+        url: 'http://localhost/github/Leandro-Leonardo/selecionar.php',
         method: 'GET',
         dataType: 'json'
     }).done(function(result){
