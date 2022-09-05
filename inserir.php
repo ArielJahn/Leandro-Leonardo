@@ -2,13 +2,21 @@
     header('Content-Type: application/json');
 
     $name = $_POST['name'];
-    $comment = $_POST['comment'];
-
+    $plaque = $_POST['plaque'];
+    $local = $_POST['local'];
+    $km = $_POST['km'];
+    $litros = $_POST['litros'];
+    $value = $_POST['value'];
+    
     $pdo = new PDO('mysql:host=localhost; dbname=carro;', 'root', '');
 
-    $stmt = $pdo->prepare('INSERT INTO comments (name, comment) VALUES (:na, :co)');
-    $stmt->bindValue(':na', $name);
-    $stmt->bindValue(':co', $comment);
+    $stmt = $pdo->prepare('INSERT INTO comments (name, plaque, local, km, litros, value) VALUES (:name, :plaque, :local, :km, :litros, :value)');
+    $stmt->bindValue(':name', $name);
+    $stmt->bindValue(':plaque', $plaque);
+    $stmt->bindValue(':local', $local);
+    $stmt->bindValue(':km', $km);
+    $stmt->bindValue(':litros', $litros);
+    $stmt->bindValue(':value', $value);
     $stmt->execute();
 
     if ($stmt->rowCount() >= 1) {

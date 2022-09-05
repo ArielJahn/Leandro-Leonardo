@@ -37,7 +37,7 @@ div.box_form{
 	background: #F5F5F5;
 }
 
-div.box_form > form > input, div.box_form > form > textarea {
+div.box_form > form > input, div.box_form > form {
 	border: 1px solid #ddd;
 	margin-top: 4px;
 	color:#666;
@@ -54,7 +54,7 @@ div.box_form > form > textarea {
 	height: 155px;
 }
 
-div.box_form > form > input:focus, div.box_form > form > textarea:focus{
+div.box_form > form > input:focus, div.box_form > form:focus{
 	outline: 0;
 }
 
