@@ -38,7 +38,7 @@ function getComments() {
         for (var i = 0; i < result.length; i++) {
             $('.box_comment').prepend('<div class="b_comm"><h4>' + result[i].name + '</h4><p>' + result[i].plaque + '</p>'
             + '<p>' + result[i].local + '</p>' + '<p>' + result[i].km + '</p>' 
-            + '<p>' + result[i].litros + '</p>' + '<p>' + result[i].value + '</p></div>');
+            + '<p>' + result[i].litros + '</p>' + '<p>' + result[i].value + '</p></div>' + '<p>' + result[i].media + '</p></div>');
         }
     });
 }
