@@ -23,6 +23,7 @@ $('#form1').submit(function(e){
         $('#litros').val('');
         $('#value').val('');
         console.log(result);
+        window.location.reload()
         getComments();
     });
 });
@@ -36,9 +37,10 @@ function getComments() {
         console.log(result);
 
         for (var i = 0; i < result.length; i++) {
-            $('.box_comment').prepend('<div class="b_comm"><h4>' + result[i].name + '</h4><p>' + result[i].plaque + '</p>'
-            + '<p>' + result[i].local + '</p>' + '<p>' + result[i].km + '</p>' 
-            + '<p>' + result[i].litros + '</p>' + '<p>' + result[i].value + '</p></div>' + '<p>' + result[i].media + '</p></div>');
+            $('.box_comment').prepend('<div class="b_comm"><h4>'+"Nome-Motorista: " + result[i].name + '</h4><p>'+"Placa/modelo: " + result[i].plaque + '</p>'
+            + '<p>'+"Local de Origem: " + result[i].local + '</p>' + '<p>'+"Kilometragem percorrida: " + result[i].km + '</p>' 
+            + '<p>'+"Litros de Combustivel gastos: " + result[i].litros + '</p>' + '<p>'+"Valor do Combustivel atual: " + result[i].value + '</p></div>' + '<p>'+"Autonomia: "+ result[i].media + '</p></div>' 
+            + '<p>'+"Valor por km: "+ result[i].valueperkm + '</p></div>' + '<p>'+ "Valor total: " + result[i].totalvalue + '</p></div>');
         }
     });
 }
