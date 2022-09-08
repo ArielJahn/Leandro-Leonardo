@@ -11,13 +11,14 @@
     
     $pdo = new PDO('mysql:host=localhost; dbname=carro;', 'root', '');
 
-    $stmt = $pdo->prepare('INSERT INTO comments (name, plaque, local, km, litros, value) VALUES (:name, :plaque, :local, :km, :litros, :value)');
+    $stmt = $pdo->prepare('INSERT INTO comments (name, plaque, local, km, litros, value, media) VALUES (:name, :plaque, :local, :km, :litros, :value, :media)');
     $stmt->bindValue(':name', $name);
     $stmt->bindValue(':plaque', $plaque);
     $stmt->bindValue(':local', $local);
     $stmt->bindValue(':km', $km);
     $stmt->bindValue(':litros', $litros);
     $stmt->bindValue(':value', $value);
+    $stmt->bindValue(':media', $km/$litros);
     $stmt->execute();
     
     if ($stmt->rowCount() >= 1) {
