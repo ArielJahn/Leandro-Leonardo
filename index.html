@@ -3,6 +3,11 @@
 <head>
 	<title>Sistema de Comentários | PHP e AJAX</title>
 	<link rel="stylesheet" href="JSajax/css/style.css">
+	<script>
+		function recarregarAPagina(){
+			window.location.reload();
+		} 
+		</script>
 </head>
 <body>
 	<section class="content">
@@ -22,6 +27,8 @@
 				<label for="name">Valor do Combustivel atual</label><br>
 				<input type="text" name="value" id="value"/><br><br>	
 				<input type="submit" form="form1" class="btn-sub" value="Enviar"/><br><br>
+				<input type="button" onClick="recarregarAPagina()" class="btn-sub" value="Atualizar!"></input>
+				<label>  Em caso de duplicamento atualize</label><br><br>
 			</form>
 		</div>
 		<div class="box_comment">

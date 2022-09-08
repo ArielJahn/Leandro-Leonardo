@@ -9,7 +9,6 @@ $('#form1').submit(function(e){
     var u_litros = $('#litros').val();
     var u_value = $('#value').val();
 
-
     console.log(u_name, u_plaque, u_local, u_km, u_litros, u_value);
     $.ajax({
         url: 'http://localhost/github/Leandro-Leonardo/inserir.php',

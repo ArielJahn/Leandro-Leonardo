@@ -58,7 +58,7 @@ div.box_form > form > input:focus, div.box_form > form:focus{
 	outline: 0;
 }
 
-div.box_form > form > input.btn-sub {
+div.box_form > form > input.btn-sub{
 	background: #C0362C;
 	color:#F5F5F5;
 	cursor: pointer;
